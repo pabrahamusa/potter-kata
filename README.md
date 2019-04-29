@@ -17,7 +17,7 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
 TestCases required
 
 a) Can create an instance of Potter class x
-b) Can add the book, its count & price 
+b) Can add the book, its count & price x
 c) Can check basic price 
 d) Can get discount for items
 e) Can calculate Multiple discounts
