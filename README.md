@@ -19,9 +19,10 @@ TestCases required
 a) Can create an instance of Potter class x
 b) Can add the book, its count & price x
 c) Can check basic price x
-d) Can get discount for items
-e) Can calculate Multiple discounts
-f) Can calculate discount for Edge cases
+d) Can get discount for items X
+e) Can calculate simple discounts x
+f) Can calculate Multiple discounts
+g) Can calculate discount for Edge cases
 
 1 1 
 2 2 
