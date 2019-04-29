@@ -10,7 +10,6 @@
 #
 
 class Potter:
-    pass
 
     # Following are constants defined
     # The dictionary of available books and their values
@@ -62,9 +61,43 @@ class Potter:
     # Get the discounted price for the books
     # passed to the method
     def getDiscountedPrice(self, books):
+        totalPrice = 0.0
         if (len(books) == len(set(books))):
             return (len(books) * self.PRICE) - self.getDiscount(len(books))
         else:
-            return len(books) * self.PRICE
+            arrangedSetList = self.getArrangedSets(books)
+            for setItem in arrangedSetList:
+                totalPrice = totalPrice + self.getDiscountedPrice(setItem)
+            if  totalPrice <= 0.0:
+                return len(books) * self.PRICE
+            else:
+                return totalPrice
+
+    # Need to split the provided list into unique sets
+    # for that we hve to iterate through the passed book list
+    # and create a new book list with multiple unique sets included
+    def getArrangedSets(self, books):
+        arrangedSetList = []
+        for item in books:
+            if len(arrangedSetList) == 0 :
+                arrangedSetList.append([item])
+            else:
+                self.updatedArrangedList(item, arrangedSetList)
+        return arrangedSetList
+
+
+    # place the passed item in correct set so that
+    # there wont be any duplicates
+    def updatedArrangedList(self, item, arrangedSetList):
+        itemArranged = False
+        for setitem in arrangedSetList:
+            if not (item in setitem):
+                setitem.append(item)
+                itemArranged = True
+                break
+        if not itemArranged:
+            arrangedSetList.append([item])
+        return  arrangedSetList
+
 
 
