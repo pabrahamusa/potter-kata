@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# This file is part of Potter kata tests
+# Author : Prakash Abraham
+#
+# This file is part of Potter kata created as part of
+# MEDNAX Code Exercises
 #
 # Unit testing the Potter class
 #
 #
-######################################
+
 
 import pytest
 from ..potter.Potter import Potter
@@ -75,5 +78,5 @@ def test_edgeCasesDiscounts(potter):
        potter.BOOKS["BOOK2"], potter.BOOKS["BOOK2"], potter.BOOKS["BOOK2"], potter.BOOKS["BOOK2"],potter.BOOKS["BOOK2"], \
        potter.BOOKS["BOOK3"], potter.BOOKS["BOOK3"], potter.BOOKS["BOOK3"], potter.BOOKS["BOOK3"], \
        potter.BOOKS["BOOK4"], potter.BOOKS["BOOK4"], potter.BOOKS["BOOK4"], potter.BOOKS["BOOK4"],potter.BOOKS["BOOK4"], \
-       potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"],potter.BOOKS["BOOK5"]])
+       potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"], potter.BOOKS["BOOK5"]])
 

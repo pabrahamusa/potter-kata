@@ -1,7 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# This file is part of Potter kata
+# Author : Prakash Abraham
+#
+# This file is part of Potter kata created as part of
+# MEDNAX Code Exercises
 #
 # Potter class to handle the calculation of optimum
 # discounts for the set of items with weighted discount
@@ -66,12 +69,8 @@ class Potter:
             return (len(books) * self.PRICE) - self.getDiscount(len(books))
         else:
             arrangedSetList = self.getArrangedSets(books)
-            for setItem in arrangedSetList:
-                totalPrice = totalPrice + self.getDiscountedPrice(setItem)
-            if  totalPrice <= 0.0:
-                return len(books) * self.PRICE
-            else:
-                return totalPrice
+            return self.getDiscountedPriceForList(arrangedSetList)
+
 
     # Need to split the provided list into unique sets
     # for that we hve to iterate through the passed book list
@@ -90,14 +89,32 @@ class Potter:
     # there wont be any duplicates
     def updatedArrangedList(self, item, arrangedSetList):
         itemArranged = False
+        discountDict = {}
         for setitem in arrangedSetList:
             if not (item in setitem):
                 setitem.append(item)
+                discountDict[self.getDiscountedPriceForList(arrangedSetList)] = setitem
+                setitem.remove(item)
                 itemArranged = True
-                break
+        if itemArranged :
+            minval = min(discountDict.keys())
+            setItem = discountDict.get(minval)
+            setItem.append(item)
+
         if not itemArranged:
             arrangedSetList.append([item])
         return  arrangedSetList
 
+
+    # Get the total price for the passed list of sets
+    # This list is created for finding out optimized price
+    def getDiscountedPriceForList(self,arrangedSetList):
+        totalPrice = 0.0
+        for setItem in arrangedSetList:
+            totalPrice = totalPrice + self.getDiscountedPrice(setItem)
+        if totalPrice <= 0.0:
+            return len(books) * self.PRICE
+        else:
+            return totalPrice
 
 
