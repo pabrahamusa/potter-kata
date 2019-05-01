@@ -65,6 +65,8 @@ class Potter:
     # passed to the method
     def getDiscountedPrice(self, books):
         totalPrice = 0.0
+        if books is None:
+            books = self.booksadded
         if (len(books) == len(set(books))):
             return (len(books) * self.PRICE) - self.getDiscount(len(books))
         else:
