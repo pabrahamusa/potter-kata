@@ -50,7 +50,6 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
 
     
 
-#Executing the code
 
 Environment Setup
 -------------
@@ -58,7 +57,7 @@ Environment Setup
 Make sure Python environment is setup on you Mac
 
 
-####Setup Python3 
+#### Setup Python3 
 
 ```javascript
 a) Install python pip
@@ -106,7 +105,7 @@ c) Virtualenv for python 3
 ```
 
 
-####Python Tests Results from PyTest
+#### Python Tests Results from PyTest
 
 ```javascript
 ================================================================================================== test session starts ==================================================================================================
