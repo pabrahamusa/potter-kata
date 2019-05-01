@@ -23,7 +23,7 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
 
 
 
-####TestCases covered:
+#### TestCases covered:
 
     |           Test Cases Scenarios          | Implemented |
     | --------------------------------------- | ------------- |
@@ -35,7 +35,7 @@ Potter mania is sweeping the country and parents of teenagers everywhere are que
     | Can calculate Multiple discounts        |      Y        |
     | Can calculate discount for Edge cases   |      Y        |
 
-####The Discounts based on item count 
+#### The Discounts based on item count 
 
 
     For 5 books there will be 25% off i.e. $10
@@ -67,9 +67,10 @@ a) Install python pip
     sudo pip install --upgrade pip
 
 
-b) Install python3 on my MacOS (laptop)
+b) Install python3 on MacOS (laptop)
+
     brew install python3
-    Python has been installed as
+    Python has been installed at
     /usr/local/bin/python3
     Add the following line to your ~/.profile file
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -77,15 +78,29 @@ b) Install python3 on my MacOS (laptop)
 c) Virtualenv for python 3
     python3 -m venv pytest_3_prakashvenv
     source ./pytest_3_prakashvenv/bin/activate
-    deactivate
+    pip install pytest
+
 ```
 
+#### Using the Potter Python class
 
+ ```javascript
+ a) git checkout https://github.com/pabrahamusa/potter-kata
+ b) go to potter-kata/ folder
+ c) run command "Python usage_potter.py"
+ d) To enter new value for the books list array change it inside the script
+    and execute the script again
+     
+     books = [1,1,2,2,3,3,4,5] 
+     books = [1,1,2,2,3,3,4,5,5,5] 
 
-####Execute Python Tests 
+```
+
+#### Execute Python Tests 
 
 ```javascript
- pytest -vs
+ a) Go to potter-kata/tests
+ b) execute command "pytest -vs"
 
 
 ```
@@ -95,9 +110,9 @@ c) Virtualenv for python 3
 
 ```javascript
 ================================================================================================== test session starts ==================================================================================================
-platform darwin -- Python 3.7.3, pytest-4.4.1, py-1.8.0, pluggy-0.9.0 -- /Users/prakashabraham/Google Drive/sync/jobhunt/usa/MEDNAX/python3/pytest_3_prakashvenv/bin/python3
+platform darwin -- Python 3.7.3, pytest-4.4.1, py-1.8.0, pluggy-0.9.0 -- /Users/prakashabraham/MEDNAX/python3/pytest_3_prakashvenv/bin/python3
 cachedir: .pytest_cache
-rootdir: /Users/prakashabraham//MEDNAX/python3/pytest_3_prakashvenv/pytest_work/potter/tests
+rootdir: /Users/prakashabraham/MEDNAX/python3/pytest_3_prakashvenv/pytest_work/potter/tests
 collected 6 items                                                                                                                                                                                                       
 
 test_potter.py::test_canAddBook PASSED
